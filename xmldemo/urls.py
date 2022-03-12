@@ -7,7 +7,7 @@ from django.views.generic.base import RedirectView, TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path(r'', include('home.urls')),
+    path(r'', include('home.urls')),
     url(r'^(?!/?static/)(?P<path>.*\..*)$',
         RedirectView.as_view(url='/static/%(path)s', permanent=False)),
 ]
